@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人任务管理系统</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+    <script type="text/javascript" src="js/toolfunctions.js"></script>
+<script type="text/javascript" src="js/javascript.js"></script> 
+</head>
+<body>
+    <div id="header">GTD Tools</div>
+    <div id="container">
+        <div id="menulist">
+            <div id="alltask">
+                <p>所有任务</p>
+            </div>
+            <div id="categorylist">
+                <p>分类列表</p>
+                <ul id="categorylistul">
+                    <li class="indentation1">默认分类</li>
+                    <li class="indentation1">默认分类</li>
+                    <li class="indentation1">默认分类</li>
+                    <li class="indentation1">默认分类<ul>
+                        <li class="indentation2">默认分类</li>
+                        <li class="indentation2">默认分类</li>
+                        <li class="indentation2">默认分类</li>
+                    </ul></li>
+                </ul>
+            </div>
+            <div id="addcategory">
+                <span style="font-size: 25px; font-weight: bold; padding-top: 1px; line-height: 1em;">+</span>
+                新增分类
+            </div>
+        </div>
+        <div id="todolist">
+            <div id="taskstatus">
+                <button id="taskstatusalltask">所有</button>
+                <button id="taskstatusunfinish" class="on">未完成</button>
+                <button id="taskstatusfinish">已完成</button>
+            </div>
+            <div id="tododetaillist"></div>
+            <div id="addtask">
+                <!-- <span style="font-size: 25px; font-weight: bold; padding-top: 1px; line-height: 1em;">+</span>
+                <span>新增任务</span> -->
+                <button>+ 新增任务</button>
+            </div>
+
+        </div>
+        <div id="taskdetail">
+            <div id="tasktitle"></div>
+            <div id="taskdate"></div>
+            <div id="taskcontent"></div>
+            <button id="taskdetailfinish">完成</button>
+            <button id="taskdetailedit">编辑</button>
+        </div>
+
+        <div id="taskedit">
+            <input type="text" id="taskedittitle" value="请输入任务名称">
+            <input type="text" id="taskeditdate" value="请输入任务时间">
+            <textarea id="taskeditcontent">任务详情</textarea>
+            <button id="taskeditprompt">提交</button>
+            <button id="taskeditcancel">取消</button>
+        </div>
+
+        <div id="promptconfirmcontainer">
+            <div id="promptconfirm">
+                <p>确认完成？</p>
+                <button id="finish">确认</button>
+                <button id="cancel">取消</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,512 @@
+*
+{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+html
+{
+    height: 100%;
+}
+body
+{
+    font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
+
+    position: relative;
+
+    height: 100%;
+    margin: 0;
+}
+
+#header
+{
+    font-size: 25px;
+    font-weight: bold;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-left: 10px;
+
+    color: #979797;
+    background-color: #ddd;
+}
+
+#container
+{
+    position: absolute;
+    top: 70px;
+    /*height:100%;*/
+    bottom: 0;
+
+    width: 100%;
+    min-width: 900px;
+    min-height: 500px;
+    /*background-color: #efffff;*/
+}
+
+#menulist
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 200px;
+    padding-left: 10px;
+
+    border-right: solid 1px #e0e0e0;
+    background-color: #f2f2f2;
+}
+
+#menulist #alltask
+{
+    /*max-height: 200px;
+    min-height: 50px;
+    overflow: hidden;*/
+}
+
+/*
+#categorylist .indentation1
+{
+    position: relative;
+    left: -50px;
+
+    width: 199px;
+    padding: 5px 0px 0px 20px;
+
+    list-style-position: inside;
+    list-style-image: url('../images/open_folder.png');
+
+    vertical-align: top;
+}*/
+
+#categorylist #categorylistul
+{
+    position: relative;
+    left: -20px;
+
+    cursor: pointer;
+}
+
+#categorylist li
+{
+    position: relative;
+    left: -30px;
+
+    width: 199px;
+    padding: 5px 0 0 20px;
+
+    list-style: inside url('../images/open_folder.png');
+
+    vertical-align: top;
+}
+
+
+#categorylist .removecategory
+{
+    font-size: 25px;
+
+    display: none;
+
+    margin-left: 30px;
+}
+
+#categorylist li:hover .removecategory
+{
+    display: inline;
+}
+
+#categorylist .on
+{
+    background-color: #fff;
+}
+
+#menulist #addcategory
+{
+    font-size: 15px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 40px;
+    padding-top: 3px;
+    padding-left: 10px;
+
+    border-top: solid 1px #e0e0e0;
+    background-color: #eee;
+}
+
+#todolist
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 200px;
+
+    width: 200px;
+
+    border-right: solid 1px #e0e0e0;
+    background-color: #fff;
+}
+
+#todolist #taskstatus
+{
+    font-size: 15px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 40px;
+    padding-top: 12px;
+    padding-left: 10px;
+
+    border-bottom: solid 1px #e0e0e0;
+    background-color: #eee;
+}
+
+#todolist #taskstatus button
+{
+    border: 1px #eee;
+    background-color: #eee;
+}
+
+#todolist #taskstatus .on
+{
+    border: solid 1px #e0e0e0;
+    background-color: #fff;
+}
+
+#todolist #tododetaillist
+{
+    font-size: 15px;
+
+    position: absolute;
+    top: 40px;
+    bottom: 40px;
+    left: 0;
+
+    overflow: scroll;
+
+    width: 100%;
+    padding: 0;
+}
+
+#todolist #tododetaillist ul
+{
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+#todolist #tododetaillist p
+{
+    font-weight: bold;
+
+    width: 199px;
+    height: 30px;
+    margin: 0;
+    padding: 7px 7px 7px 20px;
+
+    border: 0;
+    background-color: #fafaee;
+}
+
+#todolist #tododetaillist li
+{
+    padding: 5px 0 5px 40px;
+
+    background-color: #fff;
+}
+
+#todolist #tododetaillist .on
+{
+    background-color: #f2f1f1;
+}
+
+#todolist #tododetaillist li :hover
+{
+    background-color: #f2f2f2;
+}
+
+
+#todolist #addtask
+{
+    font-size: 15px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 40px;
+}
+
+#todolist #addtask button
+{
+    font-size: 15px;
+
+    width: 200px;
+    height: 40px;
+
+    cursor: pointer;
+
+    border: solid 1px #e0e0e0;
+    background-color: #eee;
+}
+
+#todolist #addtask button:hover
+{
+    background-color: #fff;
+}
+
+#taskdetail
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 400px;
+
+    display: none;
+
+    background-color: #fff;
+}
+
+
+#taskdetail #tasktitle
+{
+    font-size: 15px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 50px;
+    padding-top: 17px;
+    padding-left: 10px;
+
+    border-bottom: solid 1px #e0e0e0;
+    background-color: #eee;
+}
+
+#taskdetail #taskdate
+{
+    font-size: 15px;
+
+    position: absolute;
+    top: 50px;
+    left: 0;
+
+    width: 100%;
+    height: 50px;
+    padding-top: 17px;
+    padding-left: 10px;
+
+    border-bottom: solid 1px #e0e0e0;
+    background-color: #fafaee;
+}
+
+#taskdetail #taskcontent
+{
+    font-size: 15px;
+
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    padding-top: 17px;
+    padding-left: 10px;
+
+    border-bottom: solid 1px #e0e0e0;
+    background-color: #fff;
+}
+
+#taskdetail #taskdetailfinish
+{
+    font-size: 15px;
+
+    position: absolute;
+    /*z-index: 3;*/
+    top: 5px;
+    right: 95px;
+
+    width: 80px;
+    height: 40px;
+
+    border: solid 1px #fff;
+}
+
+#taskdetail #taskdetailedit
+{
+    font-size: 15px;
+
+    position: absolute;
+    /*z-index: 3;*/
+    top: 5px;
+    right: 5px;
+
+    width: 80px;
+    height: 40px;
+
+    border: solid 1px #fff;
+}
+
+#taskedit
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 400px;
+
+    display: none;
+
+    background-color: #fff;
+}
+
+#taskedit #taskedittitle
+{
+    font-size: 15px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 50px;
+    padding-top: 3px;
+    padding-left: 10px;
+
+    border: none;
+    /*    border-bottom: solid 1px #e0e0e0;*/
+    background-color: #eee;
+}
+
+#taskedit #taskeditprompt
+{
+    position: absolute;
+    z-index: 3;
+    right: 51%;
+    bottom: 5px;
+
+    width: 80px;
+    height: 40px;
+
+    border: solid 1px #fff;
+}
+
+#taskedit #taskeditcancel
+{
+    position: absolute;
+    z-index: 3;
+    bottom: 5px;
+    left: 51%;
+
+    width: 80px;
+    height: 40px;
+
+    border: solid 1px #fff;
+}
+
+#taskedit #taskeditdate
+{
+    font-size: 15px;
+
+    position: absolute;
+    top: 50px;
+    left: 0;
+
+    width: 100%;
+    height: 50px;
+    padding-top: 3px;
+    padding-left: 10px;
+
+    border: none;
+    /*border-bottom: solid 1px #e0e0e0;*/
+    background-color: #fafaee;
+}
+
+#taskedit #taskeditcontent
+{
+    font-size: 15px;
+
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    padding-top: 3px;
+    padding-left: 10px;
+
+    border: none;
+    /*border-bottom: solid 1px #e0e0e0;*/
+    background-color: #fff;
+}
+
+#promptconfirmcontainer
+{
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 400px;
+
+    display: none;
+
+    background-color: rgba(200,200,200,.5);
+}
+#promptconfirmcontainer #promptconfirm
+{
+    position: absolute;
+    z-index: 5;
+    top: 30%;
+    right: 35%;
+
+    width: 30%;
+    height: 20%;
+
+    border-radius: 5px;
+    background-color: rgba(200,200,200,1);
+}
+#promptconfirmcontainer #promptconfirm p
+{
+    font-size: 18px;
+
+    text-align: center;
+}
+
+#promptconfirmcontainer #promptconfirm #finish
+{
+    position: absolute;
+    top: 50%;
+    left: 28%;
+
+    width: 20%;
+    height: 30%;
+}
+
+#promptconfirmcontainer #promptconfirm #cancel
+{
+    position: absolute;
+    top: 50%;
+    right: 28%;
+
+    width: 20%;
+    height: 30%;
+}
